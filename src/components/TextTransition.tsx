@@ -57,8 +57,9 @@ const TextTransition: React.FC<TextTransitionProps> = (props) => {
                 ...(inline && ! initialRun.current ? widthTransition : undefined),
 				...style,
 				whiteSpace: inline ? "nowrap" : "normal",
-				display: inline ? "inline-flex" : "block",
-				height: heightRef.current,
+				display: inline ? "inline-flex" : "flex",
+				height: "auto",
+				justifyContent:"center"
 			}}
 		>
             {transitions((styles, item) =>
